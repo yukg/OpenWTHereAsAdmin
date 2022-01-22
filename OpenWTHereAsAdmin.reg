@@ -1,0 +1,15 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\Directory\shell\OpenWTHereAsAdmin]
+"MUIVerb"="Windows ターミナルで開く(管理者)"
+"HasLUAShield"=""
+
+[HKEY_CLASSES_ROOT\Directory\Shell\OpenWTHereAsAdmin\command]
+@="powershell.exe -WindowStyle Hidden \"Start-Process -Verb RunAs cmd.exe -ArgumentList @('/c','start wt.exe','-d','\"\"\"%V\"\"\"')\""
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\OpenWTHereAsAdmin]
+"MUIVerb"="Windows ターミナルで開く(管理者)"
+"HasLUAShield"=""
+
+[HKEY_CLASSES_ROOT\Directory\Background\Shell\OpenWTHereAsAdmin\command]
+@="powershell.exe -WindowStyle Hidden \"Start-Process -Verb RunAs cmd.exe -ArgumentList @('/c','start wt.exe','-d','\"\"\"%V\"\"\"')\""
